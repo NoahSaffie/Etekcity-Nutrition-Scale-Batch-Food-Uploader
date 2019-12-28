@@ -32,7 +32,7 @@ Other notes:
     - This will save an excel spread sheet containing all your current custom foods
   - To add to or edit these: 
     - Modify the file accordingly
-    - Run: python Controller.py --token=<your token> --accountid=<your accountid> --file=<file path with changes>.xlsx
+    - Run: python Controller.py --token=\<your token\> --accountid=\<your accountid\> --file=\<file path with changes\>.xlsx
 
 Conditions:
   - CHANGING image associated with a food is not supported.
