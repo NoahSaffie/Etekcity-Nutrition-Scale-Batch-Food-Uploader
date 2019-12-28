@@ -13,7 +13,8 @@ Complications: The one difficult aspect is that YOU need to get your accountid a
 
 How?
 - One solution is to MITM yourself.
-For windows:
+
+For windows with iOS:
 - Install Fiddler
 - Follow instructions here: https://docs.telerik.com/fiddler/Configure-Fiddler/Tasks/ConfigureForiOS
 - Once you are capturing traffic:
@@ -21,6 +22,8 @@ For windows:
   - Click on this record and go to 'Inspectors'
   - Under the 'Headers' tab -> Miscellaneous
   - You want the values for: tk (token), and accountID
+  
+ I don't own an android nor a Mac to find steps for those systems but should be just as easier (likely easier with android).
   
 Other notes:
   - While it is resonable to expect accountID never changes, your token most likely does.
