@@ -3,6 +3,7 @@
 Requires Python 3 with some dependencies:
   - requests
   - openpyxl
+  
 For easier setup can use Anaconda:
   - https://anaconda.org/nsaffie/etekcityapp
 
