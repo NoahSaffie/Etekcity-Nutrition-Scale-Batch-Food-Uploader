@@ -28,7 +28,7 @@ Other notes:
   
   How does this program actually help me?
   - Once you have the python environment setup and this project downloaded go to the directory that has Controller.py
-  - Run: python Controller.py --token=<your token> --accountid=<your accountid> --save=<file path>.xlsx
+  - Run: python Controller.py --token=\<your token\> --accountid=\<your accountid\> --save=\<file path>.xlsx
     - This will save an excel spread sheet containing all your current custom foods
   - To add to or edit these: 
     - Modify the file accordingly
@@ -41,3 +41,6 @@ Conditions:
   - All other nutrition information should have value -1 if you are not using it (this encodes as optional)
   - First row (header) of Excel spreedsheet is ignored
   - You can not add any more columns (Etekcity base application only supports so many
+
+Currently not fully implemented:
+  - Deleting foods. It is possible but in an effort to reduce possible mistakes not implemented.
