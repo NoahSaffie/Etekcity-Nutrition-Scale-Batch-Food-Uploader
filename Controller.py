@@ -91,7 +91,7 @@ else:
             new_data.append(row_)
     print('Found ' + str(len(new_data)) + ' new foods.')
     for data in new_data:
-        if data[5] <= 0:
+        if data[5] < 0:
             print('Calories must be a non-negative integer')
 
         n_data = {'foodID': data[0], 'foodname': data[2], 'image': data[1], 'weight': data[3], 'weight_unit': data[4], 'calories': data[5], 'calfromfat': data[6], 'totalfat': data[7], 'saturatedfat': data[8], 'transfat': data[9], 'fat_poly': data[10], 'fat_mono': data[11], 'cholesterol': data[12], 'sodium': data[13], 'totalcarbs': data[14], 'dietaryfiber': data[15], 'sugars': data[16], 'protein': data[17], 'vd': data[18], 'calcium': data[19], 'iron': data[20], 'potassium': data[21], 'va': data[22], 'vc': data[23]}

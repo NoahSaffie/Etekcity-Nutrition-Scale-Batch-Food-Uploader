@@ -22,7 +22,14 @@ class Session:
   
         # extracting data in json format 
         data = response.json()
-        nutrition_info = NutritionInfo(data['foodname'], data)
+        nutrition_info = None
+        try:
+            nutrition_info = NutritionInfo(data['foodname'], data)
+        except:
+            print('Got an invalid response')
+            print('Request (getFood): ' + str(json.dumps(PARAMS))) 
+            print('Response (getFood): ' + str(data))
+            return None
         return nutrition_info
  
     def getFoodList(self):
@@ -36,7 +43,13 @@ class Session:
   
         # extracting data in json format 
         data = response.json()
-        foodList = data['myFoodListResponses']
+        try:
+            foodList = data['myFoodListResponses']
+        except:
+            print('Got an invalid response')
+            print('Request (getFoodList): ' + str(json.dumps(PARAMS))) 
+            print('Response (getFoodList): ' + str(data))
+            return False
         foodList = list(map(lambda x: x['foodID'], foodList))
         return foodList
 
@@ -53,8 +66,13 @@ class Session:
   
         # extracting data in json format 
         data = response.json()
-        #print(data)
-        return bool(data['editSuccess'])
+        try:
+            return bool(data['editSuccess'])
+        except:
+            print('Got an invalid response')
+            print('Request (editFood): ' + str(json.dumps(PARAMS))) 
+            print('Response (editFood): ' + str(data))
+            return False
 
     def searchFood(self, search_criteria):
         URL = self.BASE_URL + 'searchFoodName/'
@@ -67,7 +85,13 @@ class Session:
   
         # extracting data in json format 
         data = response.json() 
-        return bool(data['foodNameExist'])
+        try:
+            return bool(data['foodNameExist'])
+        except:
+            print('Got an invalid response')
+            print('Request (searchFood): ' + str(json.dumps(PARAMS))) 
+            print('Response (searchFood): ' + str(data))
+            return False
 
     def createFood(self, nutrition_info):
         URL = self.BASE_URL + 'createmyFood/'
@@ -81,8 +105,13 @@ class Session:
         # extracting data in json format 
         data = response.json()
         #print(data)
-        return bool(data['createSuccess'])
-
+        try:
+            return bool(data['createSuccess'])
+        except:
+            print('Got an invalid response')
+            print('Request (createFood): ' + str(json.dumps(PARAMS))) 
+            print('Response (createFood): ' + str(data))
+            return False
     
     def deleteFood(self, food_id):
         URL = self.BASE_URL + 'deletemyFood/'
@@ -94,4 +123,10 @@ class Session:
   
         # extracting data in json format 
         data = response.json()
-        return bool(data['deleteSuccess'])
+        try:
+            return bool(data['deleteSuccess'])
+        except:
+            print('Got an invalid response')
+            print('Request (deleteFood): ' + str(json.dumps(PARAMS))) 
+            print('Response (deleteFood): ' + str(data))
+            return False
