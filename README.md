@@ -41,7 +41,7 @@ Other notes:
 Conditions:
   - CHANGING image associated with a food is not supported.
   - Don't put a foodID if you are adding a new record
-  - Calories and Serving size must be nonnegative values
+  - Calories and Serving size must be nonnegative values (including nonzero)
   - All other nutrition information should have value -1 if you are not using it (this encodes as optional)
   - First row (header) of Excel spreedsheet is ignored
   - You can not add any more columns (Etekcity base application only supports so many
