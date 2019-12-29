@@ -1,4 +1,5 @@
 # Etekcity-Nutrition-Scale-Batch-Food-Uploader
+Designed around [Etekcity Nutrition Scale](https://www.etekcity.com/product/100334)
 
 Requires Python 3 with some dependencies:
   - requests
